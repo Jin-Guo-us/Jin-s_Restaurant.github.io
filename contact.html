@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Restaurant — Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo"><a href="index.html">SimpleRestaurant</a></div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h1>Contact</h1>
+    <div class="grid sm-1">
+      <div class="card">
+        <h3>Find Us</h3>
+        <p>123 Maple Street, Your City, NY 10001</p>
+        <iframe title="map" src="https://www.google.com/maps?q=Times%20Square%2C%20New%20York&output=embed" width="100%" height="260" style="border:0" loading="lazy"></iframe>
+      </div>
+      <div class="card">
+        <h3>Send a Message</h3>
+        <form onsubmit="event.preventDefault(); alert('Thanks!'); this.reset();">
+          <input placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer><div class="section">
+    <div>Follow: <a href="#">Facebook</a> · <a href="#">Instagram</a></div>
+    <div>Hours: Mon–Thu 11–21, Fri–Sun 11–22</div>
+  </div></footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+
+/* Minimal, beginner-friendly CSS */
+*{
+  box-sizing:border-box
+}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#222
+}
+a{
+  text-decoration:none;
+  color:inherit
+}
+header{
+  background:#111;
+  color:#fff;
+  position:sticky;
+  top:0
+}
+.nav{
+  max-width:960px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px
+}
+.logo{
+  font-weight:bold
+}
+.nav a{
+  margin:0 8px;
+  color:#fff
+}
+.hamburger{
+  display:none;
+  cursor:pointer
+}
+.hamburger span{
+  display:block;
+  width:24px;
+  height:3px;
+  background:#fff;
+  margin:4px 0
+}
+.nav-links{
+  display:flex;
+  align-items:center
+}
+.hero{
+  background:#333 url('https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  color:#fff
+}
+.hero .wrap{
+  max-width:960px;
+  margin:0 auto;
+  padding:80px 16px
+}
+.hero h1{
+  margin:0 0 8px
+}
+.section{
+  max-width:960px;
+  margin:0 auto;
+  padding:24px 16px
+}
+.grid{
+  display:grid;
+  gap:12px
+}
+.card{
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:12px
+}
+button,.btn{
+  background:#ffb703;
+  border:0;
+  padding:10px 14px;
+  border-radius:6px;
+  cursor:pointer
+}
+footer{
+  background:#111;
+  color:#eee
+}
+footer .section{
+  padding:16px
+}
+/* Menu */
+.menu-table{
+  width:100%;
+  border-collapse:collapse
+}
+.menu-table th,.menu-table td{
+  border:1px solid #ddd;
+  padding:8px;
+  text-align:left
+}
+/* Slider (very simple) */
+.slide img {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.slider{
+  position:relative;
+  overflow:hidden;
+  border-radius:8px
+}
+.slides{
+  display:flex;
+  transition:transform .4s
+}
+.slide{
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ctrl{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.5);
+  color:#fff;border:0;
+  width:36px;height:36px;
+  border-radius:50%
+}
+.prev{
+  left:8px
+}
+.next{
+  right:8px
+}
+/* Contact */
+form{
+  display:grid;
+  gap:8px
+}
+input,textarea{
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px
+}
+/* Responsive */
+@media (max-width:700px){
+  .nav-links{display:none;flex-direction:column;background:#111;padding:8px}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .grid.sm-1{grid-template-columns:1fr}
+}
+@media (min-width:701px){
+  .grid.sm-1{grid-template-columns:repeat(3,1fr)}
+}
