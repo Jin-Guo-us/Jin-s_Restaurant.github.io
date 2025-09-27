@@ -187,3 +187,11 @@ input,textarea{
     grid-template-columns: 1fr;
   }
 }
+@media (max-width:700px){
+  .slide img {
+    width: 100%;      /* 占满容器宽度 */
+    height: auto;     /* 高度自动缩放 */
+    max-height: 240px; /* 可选：限制最大高度，避免太高 */
+    object-fit: cover;
+  }
+}
