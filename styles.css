@@ -72,6 +72,7 @@ header{
   border-radius:8px;
   padding:12px
 }
+
 button,.btn{
   background:#ffb703;
   border:0;
@@ -143,35 +144,6 @@ input,textarea{
   border:1px solid #ccc;
   border-radius:6px
 }
-
-.about-section{
-  display:grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap:16px;
-  align-items:center;
-}
-
-.about-text{
-  background:#000;
-  color:#fff;
-  padding:20px;
-  border-radius:8px;
-  font-size:18px;
-  line-height:1.6;
-}
-
-.about-img img{
-  width:100%;
-  height:auto;
-  border-radius:8px;
-}
-
-@media (max-width:700px){
-  .about-section{
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Responsive */
 @media (max-width:700px){
   .nav-links{display:none;flex-direction:column;background:#111;padding:8px}
@@ -181,4 +153,37 @@ input,textarea{
 }
 @media (min-width:701px){
   .grid.sm-1{grid-template-columns:repeat(3,1fr)}
+}
+
+/* 选中紧跟在 <h1> 后面的 .grid（即 About 这块的容器） */
+.section h1 + .grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr; /* 左大右小 */
+  gap: 16px;
+  align-items: center;
+}
+
+/* 左侧第一个元素（文字卡片）：白字黑底 + 字号放大 + 保留边框 */
+.section h1 + .grid .card:first-child {
+  background: #000;   /* 黑底 */
+  color: #fff;        /* 白字 */
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  border-radius: 8px; /* 保留你原有的圆角风格 */
+  /* 不写 border:none，边框仍然保留 */
+}
+
+/* 右侧第二个元素是 <img>（不是 .card）：让它自适应缩小并保持圆角 */
+.section h1 + .grid > img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* 手机端：上下堆叠显示 */
+@media (max-width:700px){
+  .section h1 + .grid {
+    grid-template-columns: 1fr;
+  }
 }
