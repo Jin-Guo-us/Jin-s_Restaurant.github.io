@@ -1,25 +1,30 @@
 
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jin's Restaurant — Home</title>
+<title>Simple Restaurant — Home</title>
 <link rel="stylesheet" href="styles.css">
-</head><body>
-<header>
-  <div class="nav">
-    <div class="logo"><a href="index.html">Jin's Restaurant</a></div>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="hamburger" aria-label="menu"><span></span><span></span><span></span></div>
-  </div>
-</header>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo"><a href="index.html">SimpleRestaurant</a></div>
+
+      <!-- Hamburger (小屏可见) -->
+      <button class="hamburger" id="navToggle" aria-label="Toggle menu" aria-controls="primaryNav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>Best Fast Food</h1>
+    <h1>Fast Food, Made Simple</h1>
     <p>Fresh burgers, crispy fries, and cold shakes — right in your neighborhood.</p>
     <a class="btn" href="menu.html">See Menu</a>
   </div>
