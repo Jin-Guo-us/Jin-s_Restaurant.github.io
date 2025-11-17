@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Hero */
+.hero {
+  background: #333
+    url("https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600&auto=format&fit=crop")
+    center/cover no-repeat;
+  color: #fff;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 80px 16px;
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.slider-btn.prev {
+  left: 8px;
+}
+.slider-btn.next {
+  right: 8px;
+}
+
+/* Cart */
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-name {
+  font-weight: 600;
+}
+
+.cart-price {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.qty-ctrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  padding: 0.15rem 0.5rem;
+}
+
+.qty-ctrl button {
+  border: none;
+  background: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.qty-ctrl .qty {
+  min-width: 1.3rem;
+  text-align: center;
+}
+
+.cart-remove {
+  border: none;
+  background: none;
+  color: #c00;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 3rem;
+}
